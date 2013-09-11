@@ -1,0 +1,53 @@
+/********************************
+Author: Sravanthi Kota Venkata
+********************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "disparity.h"
+
+void computeSAD(I2D *Ileft, I2D* Iright_moved, F2D* SAD)
+{
+    int rows, cols, i, j, diff;    
+    rows = Ileft->height;
+    cols = Ileft->width;
+    int togo, size;
+    asm volatile (
+      "vmov d0, %[rows], %[cols]\n\t"
+      "vmov d1, %[diff], %[SAD]\n\t"
+      "vmov d2, %[Ileft], %[Iright_moved]\n\t"
+       : //@Amin: Is what I have written right even though rows and cols are related to Ileft? Shouldn't I just vmov Ileft instead of Ileft, rows and cols?
+       :
+        [rows] "r" (rows), [cols] "r" (cols), 
+        [diff] "r" (diff), [SAD] "r" (SAD), 
+        [Ileft] "r" (Ileft), [Iright_moved] "r" (Iright_moved)
+       :
+      );
+
+    m5rh_start(100,1);
+    
+    //for(i=0; i<rows; i++) //original loop
+    
+    for (i=0; i < rows *cols;i+=8)  //we can also use i+=8 assuming that at least 1/4th of the FUs are multiplers
+    {
+        togo = rows*cols - i;
+        size = (togo > 8) ? 8 : togo;
+        m5_rh_load_data(0, 2, 1, 0); // 1 cycle for address generation as in Ileft->data+i there's only one + operation (tree depth)
+        m5_rh_load_data(Ileft->data+i, size*4, 4, 1); //load data as many data elements as the number of size (each int/float size is 4 byte)
+        m5_rh_load_data(Iright_moved->data+i, size*4, 4, 1); //load data as many data elements as the number of size
+        m5_rh_load_data(0, 1, 9 , 0); //Exec time  --subtraction takes 5 cycles and multiplication takes 4 cycles
+        for(j=0; j < size ; j++)
+        //for(j=0; j<cols; j++) //original loop
+        {
+              //diff = subsref(Ileft,i,j) - subsref(Iright_moved,i,j);
+              diff = asubsref(Ileft,i+j) - asubsref(Iright_moved,i+j); //trying to make it a linear array but converting subsref to asubsref
+              asubsref(SAD,i+j) = diff * diff;              
+        }
+        m5_rh_load_data(SAD->data+i, size*4, 4, 1); //store results
+        m5_rh_load_data(0, 0, 0, 0); 
+    }
+    m5rh_start(100,0);
+    
+    return;
+}
+

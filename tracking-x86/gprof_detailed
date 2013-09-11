@@ -1,0 +1,399 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 16.07      0.32     0.32                             fread
+  6.12      0.44     0.12                             imageBlur (imageBlur.c:56 @ 408445)
+  6.12      0.56     0.12                             memcpy
+  5.10      0.66     0.10                             _IO_file_xsgetn
+  4.08      0.74     0.08                             calcSobel_dY (calcSobel_dY.c:55 @ 404576)
+  4.08      0.82     0.08                             fSetArray (fSetArray.c:17 @ 4054f0)
+  3.57      0.89     0.07                             imageResize (imageResize.c:52 @ 40869b)
+  2.55      0.94     0.05                             calcAreaSum (calcAreaSum.c:104 @ 402676)
+  2.55      0.99     0.05                             calcSobel_dY (calcSobel_dY.c:68 @ 40474b)
+  2.55      1.04     0.05                             fSetArray (fSetArray.c:16 @ 4054eb)
+  2.55      1.09     0.05                             fread (stdio2.h:287 @ 409249)
+  2.04      1.13     0.04                             imageBlur (imageBlur.c:43 @ 408307)
+  1.79      1.16     0.04                             calcSobel_dX (calcSobel_dX.c:53 @ 4041ed)
+  1.53      1.19     0.03                             calcAreaSum (calcAreaSum.c:112 @ 4026ce)
+  1.53      1.22     0.03                             calcAreaSum (calcAreaSum.c:33 @ 4026d5)
+  1.53      1.25     0.03                             calcSobel_dX (calcSobel_dX.c:66 @ 404315)
+  1.53      1.28     0.03                             fSetArray (fSetArray.c:16 @ 4054f9)
+  1.53      1.31     0.03                             getInterpolatePatch (getInterpolatePatch.c:35 @ 403ff7)
+  1.53      1.34     0.03                             imageBlur (imageBlur.c:7 @ 408401)
+  1.28      1.37     0.03                             calcSobel_dY (calcSobel_dY.c:7 @ 404720)
+  1.28      1.39     0.03                             imageResize (imageResize.c:67 @ 4087d3)
+  1.02      1.41     0.02                             __open_nocancel (syscall-template.S:82 @ 416ca9)
+  1.02      1.43     0.02                             __read_nocancel
+  1.02      1.45     0.02                             fReshape (fReshape.c:21 @ 405138)
+  1.02      1.47     0.02                             getInterpolatePatch (getInterpolatePatch.c:35 @ 404025)
+  1.02      1.49     0.02                             imageBlur (imageBlur.c:8 @ 4082e0)
+  1.02      1.51     0.02                             readImage (readImage.c:100 @ 409292)
+  0.77      1.53     0.02                             _L_unlock_163
+  0.77      1.54     0.02                             calcAreaSum (calcAreaSum.c:57 @ 402581)
+  0.77      1.56     0.02                             calcAreaSum (calcAreaSum.c:56 @ 402584)
+  0.77      1.57     0.02                             getInterpolatePatch (getInterpolatePatch.c:33 @ 403fe0)
+  0.77      1.59     0.02                             imageResize (imageResize.c:52 @ 408689)
+  0.77      1.60     0.02                             imageResize (imageResize.c:65 @ 4087dd)
+  0.51      1.61     0.01                             __close_nocancel (syscall-template.S:82 @ 4169e9)
+  0.51      1.62     0.01                             brk
+  0.51      1.63     0.01                             calcAreaSum (calcAreaSum.c:48 @ 40252f)
+  0.51      1.64     0.01                             calcGoodFeature (calcGoodFeature.c:62 @ 402ab7)
+  0.51      1.65     0.01                             calcSobel_dX (calcSobel_dX.c:55 @ 404220)
+  0.51      1.66     0.01                             calcSobel_dX (calcSobel_dX.c:9 @ 4042ec)
+  0.51      1.67     0.01                             calcSobel_dX (calcSobel_dX.c:66 @ 40432f)
+  0.51      1.68     0.01                             calcSobel_dY (calcSobel_dY.c:7 @ 40452e)
+  0.51      1.69     0.01                             calcSobel_dY (calcSobel_dY.c:55 @ 40455b)
+  0.51      1.70     0.01                             calcSobel_dY (calcSobel_dY.c:53 @ 404572)
+  0.51      1.71     0.01                             calcSobel_dY (calcSobel_dY.c:57 @ 40457c)
+  0.51      1.72     0.01                             calcSobel_dY (calcSobel_dY.c:70 @ 4045d2)
+  0.51      1.73     0.01                             calcSobel_dY (calcSobel_dY.c:66 @ 404755)
+  0.51      1.74     0.01                             fSetArray (fSetArray.c:16 @ 4054d8)
+  0.51      1.75     0.01                             fSetArray (fSetArray.c:9 @ 4054e8)
+  0.51      1.76     0.01                             fillFeatures (fillFeatures.c:41 @ 4035e1)
+  0.51      1.77     0.01                             getInterpolatePatch (getInterpolatePatch.c:8 @ 403fd9)
+  0.51      1.78     0.01                             imageBlur (imageBlur.c:43 @ 4082f3)
+  0.51      1.79     0.01                             imageBlur (imageBlur.c:45 @ 408333)
+  0.51      1.80     0.01                             imageBlur (imageBlur.c:38 @ 40833c)
+  0.51      1.81     0.01                             imageBlur (imageBlur.c:38 @ 408451)
+  0.51      1.82     0.01                             imageBlur (imageBlur.c:58 @ 408460)
+  0.51      1.83     0.01                             readImage (readImage.c:93 @ 409299)
+  0.51      1.84     0.01                             readImage (readImage.c:100 @ 4092a1)
+  0.26      1.85     0.01                             _IO_default_xsputn
+  0.26      1.85     0.01                             _IO_sgetn
+  0.26      1.86     0.01                             calcAreaSum (calcAreaSum.c:33 @ 402665)
+  0.26      1.86     0.01                             calcAreaSum (calcAreaSum.c:104 @ 402670)
+  0.26      1.87     0.01                             calcGoodFeature (calcGoodFeature.c:42 @ 40287b)
+  0.26      1.87     0.01                             calcGoodFeature (calcGoodFeature.c:27 @ 40288c)
+  0.26      1.88     0.01                             calcGoodFeature (calcGoodFeature.c:62 @ 402aaf)
+  0.26      1.88     0.01                             calcGoodFeature (calcGoodFeature.c:61 @ 402ab1)
+  0.26      1.89     0.01                             calcPyrLKTrack (calcPyrLKTrack.c:142 @ 4030ad)
+  0.26      1.89     0.01                             calcPyrLKTrack (calcPyrLKTrack.c:144 @ 4030b0)
+  0.26      1.90     0.01                             calcSobel_dX (calcSobel_dX.c:10 @ 4041e0)
+  0.26      1.90     0.01                             calcSobel_dX (calcSobel_dX.c:48 @ 404217)
+  0.26      1.91     0.01                             calcSobel_dX (calcSobel_dX.c:48 @ 404228)
+  0.26      1.91     0.01                             calcSobel_dY (calcSobel_dY.c:63 @ 404700)
+  0.26      1.92     0.01                             fillFeatures (fillFeatures.c:11 @ 4036ed)
+  0.26      1.92     0.01                             fillFeatures (fillFeatures.c:52 @ 4036f8)
+  0.26      1.93     0.01                             getInterpolatePatch (getInterpolatePatch.c:8 @ 403fe4)
+  0.26      1.93     0.01                             imageBlur (imageBlur.c:56 @ 408433)
+  0.26      1.94     0.01                             imageBlur (imageBlur.c:54 @ 408441)
+  0.26      1.94     0.01                             imageResize (imageResize.c:8 @ 408670)
+  0.26      1.95     0.01                             imageResize (imageResize.c:7 @ 4087a1)
+  0.26      1.95     0.01                             imageResize (imageResize.c:67 @ 4087c1)
+  0.26      1.96     0.01                             readImage (readImage.c:99 @ 4092a3)
+  0.26      1.96     0.01                             readImage (readImage.c:93 @ 4092a8)
+  0.00      1.96     0.00      725     0.00     0.00  fMallocHandle (fMallocHandle.c:10 @ 404d00)
+  0.00      1.96     0.00      667     0.00     0.00  fFreeHandle (fFreeHandle.c:10 @ 404b90)
+  0.00      1.96     0.00      637     0.00     0.00  fSetArray (fSetArray.c:10 @ 405490)
+  0.00      1.96     0.00      572     0.00     0.00  getInterpolatePatch (getInterpolatePatch.c:9 @ 403e80)
+  0.00      1.96     0.00       48     0.00     0.00  iMallocHandle (iMallocHandle.c:10 @ 4074d0)
+  0.00      1.96     0.00       39     0.00     0.00  iFreeHandle (iFreeHandle.c:10 @ 407360)
+  0.00      1.96     0.00       15     0.00     0.00  fDeepCopy (fDeepCopy.c:8 @ 404770)
+  0.00      1.96     0.00        4     0.00     0.00  ffVertcat (ffVertcat.c:8 @ 406640)
+  0.00      1.96     0.00        4     0.00     0.00  iSetArray (iSetArray.c:10 @ 407680)
+  0.00      1.96     0.00        3     0.00     0.00  calcAreaSum (calcAreaSum.c:34 @ 402460)
+  0.00      1.96     0.00        1     0.00     0.00  main (script_tracking.c:8 @ 400f70)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.51% of 1.96 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     16.1    0.32    0.00                 fread [1]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]      6.1    0.12    0.00                 memcpy [3]
+-----------------------------------------------
+                                                 <spontaneous>
+[4]      5.1    0.10    0.00                 _IO_file_xsgetn [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[26]     1.0    0.02    0.00                 __open_nocancel (syscall-template.S:82 @ 416ca9) [26]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     1.0    0.02    0.00                 __read_nocancel [27]
+-----------------------------------------------
+                                                 <spontaneous>
+[33]     0.8    0.02    0.00                 _L_unlock_163 [33]
+-----------------------------------------------
+                                                 <spontaneous>
+[34]     0.5    0.01    0.00                 brk [34]
+-----------------------------------------------
+                                                 <spontaneous>
+[57]     0.5    0.01    0.00                 __close_nocancel (syscall-template.S:82 @ 4169e9) [57]
+-----------------------------------------------
+                                                 <spontaneous>
+[80]     0.3    0.01    0.00                 _IO_default_xsputn [80]
+-----------------------------------------------
+                                                 <spontaneous>
+[81]     0.3    0.01    0.00                 _IO_sgetn [81]
+-----------------------------------------------
+                0.00    0.00       1/725         calcGoodFeature (calcGoodFeature.c:28 @ 402798) [191]
+                0.00    0.00       1/725         calcGoodFeature (calcGoodFeature.c:34 @ 4027ad) [194]
+                0.00    0.00       1/725         calcGoodFeature (calcGoodFeature.c:36 @ 4027d0) [198]
+                0.00    0.00       1/725         calcGoodFeature (calcGoodFeature.c:50 @ 402966) [236]
+                0.00    0.00       1/725         calcGoodFeature (calcGoodFeature.c:52 @ 40297c) [239]
+                0.00    0.00       1/725         calcGoodFeature (calcGoodFeature.c:54 @ 40299e) [243]
+                0.00    0.00       1/725         getANMS (getANMS.c:35 @ 40382f) [1867]
+                0.00    0.00       1/725         fReshape (fReshape.c:16 @ 4050ee) [1002]
+                0.00    0.00       1/725         fTranspose (fTranspose.c:16 @ 405cdf) [1294]
+                0.00    0.00       3/725         calcAreaSum (calcAreaSum.c:43 @ 4024b0) [122]
+                0.00    0.00       4/725         calcPyrLKTrack (calcPyrLKTrack.c:42 @ 402c7f) [321]
+                0.00    0.00       4/725         ffVertcat (ffVertcat.c:18 @ 40666d) [1512]
+                0.00    0.00       5/725         getANMS (getANMS.c:90 @ 403a7b) [1931]
+                0.00    0.00       5/725         getANMS (getANMS.c:90 @ 403a8c) [1933]
+                0.00    0.00       9/725         calcSobel_dX (calcSobel_dX.c:22 @ 4040fb) [543]
+                0.00    0.00       9/725         calcSobel_dX (calcSobel_dX.c:24 @ 404120) [547]
+                0.00    0.00      31/725         fDeepCopy (fDeepCopy.c:18 @ 404789) [743]
+                0.00    0.00     646/725         fSetArray (fSetArray.c:10 @ 4054b0) [1077]
+[82]     0.0    0.00    0.00     725         fMallocHandle (fMallocHandle.c:10 @ 404d00) [82]
+-----------------------------------------------
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:58 @ 402b2d) [277]
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:66 @ 402b3e) [280]
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:68 @ 402b4b) [282]
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:70 @ 402b5f) [285]
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:72 @ 402b80) [291]
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:74 @ 402b90) [294]
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:75 @ 402ba0) [297]
+                0.00    0.00       1/667         calcGoodFeature (calcGoodFeature.c:75 @ 402bac) [299]
+                0.00    0.00       1/667         getANMS (getANMS.c:149 @ 403d79) [2018]
+                0.00    0.00       1/667         getANMS (getANMS.c:150 @ 403d8a) [2021]
+                0.00    0.00       1/667         getANMS (getANMS.c:151 @ 403d9a) [2024]
+                0.00    0.00       3/667         calcAreaSum (calcAreaSum.c:98 @ 4025fe) [154]
+                0.00    0.00       3/667         calcAreaSum (calcAreaSum.c:33 @ 402740) [184]
+                0.00    0.00       4/667         calcPyrLKTrack (calcPyrLKTrack.c:173 @ 4032ac) [475]
+                0.00    0.00       4/667         getANMS (getANMS.c:76 @ 403ddb) [2031]
+                0.00    0.00       4/667         getANMS (getANMS.c:79 @ 403e0d) [2038]
+                0.00    0.00       5/667         getANMS (getANMS.c:84 @ 403a4d) [1924]
+                0.00    0.00       5/667         getANMS (getANMS.c:86 @ 403a5d) [1927]
+                0.00    0.00       5/667         getANMS (getANMS.c:102 @ 403b89) [1964]
+                0.00    0.00       5/667         getANMS (getANMS.c:102 @ 403b9c) [1966]
+                0.00    0.00       5/667         imageBlur (imageBlur.c:7 @ 4084d0) [2617]
+                0.00    0.00       5/667         imageResize (imageResize.c:74 @ 40886f) [2691]
+                0.00    0.00       9/667         calcSobel_dX (calcSobel_dX.c:9 @ 40439b) [584]
+                0.00    0.00       9/667         calcSobel_dX (calcSobel_dX.c:72 @ 4043ab) [587]
+                0.00    0.00       9/667         calcSobel_dX (calcSobel_dX.c:73 @ 4043bb) [590]
+                0.00    0.00       9/667         calcSobel_dY (calcSobel_dY.c:63 @ 404639) [647]
+                0.00    0.00      20/667         calcPyrLKTrack (calcPyrLKTrack.c:156 @ 403450) [525]
+                0.00    0.00      40/667         calcPyrLKTrack (calcPyrLKTrack.c:163 @ 4031e8) [456]
+                0.00    0.00      40/667         calcPyrLKTrack (calcPyrLKTrack.c:163 @ 4031fb) [458]
+                0.00    0.00      40/667         calcPyrLKTrack (calcPyrLKTrack.c:164 @ 40320b) [461]
+                0.00    0.00     432/667         calcPyrLKTrack (calcPyrLKTrack.c:160 @ 403170) [452]
+[83]     0.0    0.00    0.00     667         fFreeHandle (fFreeHandle.c:10 @ 404b90) [83]
+-----------------------------------------------
+                0.00    0.00       1/637         fillFeatures (fillFeatures.c:37 @ 4034bb) [1718]
+                0.00    0.00       1/637         getANMS (getANMS.c:41 @ 4038fd) [1885]
+                0.00    0.00       1/637         getANMS (getANMS.c:42 @ 40391e) [1888]
+                0.00    0.00       3/637         calcAreaSum (calcAreaSum.c:42 @ 4024bc) [123]
+                0.00    0.00       3/637         calcAreaSum (calcAreaSum.c:98 @ 40260f) [156]
+                0.00    0.00       5/637         imageBlur (imageBlur.c:16 @ 408200) [2574]
+                0.00    0.00       5/637         imageBlur (imageBlur.c:19 @ 40821c) [2578]
+                0.00    0.00       5/637         imageResize (imageResize.c:25 @ 40857b) [2635]
+                0.00    0.00       5/637         imageResize (imageResize.c:25 @ 408599) [2640]
+                0.00    0.00       9/637         calcSobel_dX (calcSobel_dX.c:19 @ 4040d0) [537]
+                0.00    0.00       9/637         calcSobel_dX (calcSobel_dX.c:22 @ 4040ec) [541]
+                0.00    0.00       9/637         calcSobel_dY (calcSobel_dY.c:18 @ 404420) [601]
+                0.00    0.00       9/637         calcSobel_dY (calcSobel_dY.c:26 @ 40443c) [605]
+                0.00    0.00     572/637         getInterpolatePatch (getInterpolatePatch.c:23 @ 403f33) [2062]
+[84]     0.0    0.00    0.00     637         fSetArray (fSetArray.c:10 @ 405490) [84]
+-----------------------------------------------
+                0.00    0.00      20/572         calcPyrLKTrack (calcPyrLKTrack.c:94 @ 402e7c) [383]
+                0.00    0.00      20/572         calcPyrLKTrack (calcPyrLKTrack.c:100 @ 402eb0) [390]
+                0.00    0.00      20/572         calcPyrLKTrack (calcPyrLKTrack.c:99 @ 402eca) [393]
+                0.00    0.00      20/572         calcPyrLKTrack (calcPyrLKTrack.c:90 @ 403349) [489]
+                0.00    0.00      20/572         calcPyrLKTrack (calcPyrLKTrack.c:92 @ 403370) [494]
+                0.00    0.00      20/572         calcPyrLKTrack (calcPyrLKTrack.c:94 @ 40339f) [500]
+                0.00    0.00     223/572         calcPyrLKTrack (calcPyrLKTrack.c:135 @ 4032fa) [483]
+                0.00    0.00     229/572         calcPyrLKTrack (calcPyrLKTrack.c:136 @ 40307b) [421]
+[85]     0.0    0.00    0.00     572         getInterpolatePatch (getInterpolatePatch.c:9 @ 403e80) [85]
+-----------------------------------------------
+                0.00    0.00       1/48          getANMS (getANMS.c:31 @ 4037d5) [1857]
+                0.00    0.00       1/48          getANMS (getANMS.c:42 @ 40392e) [1892]
+                0.00    0.00       4/48          calcPyrLKTrack (calcPyrLKTrack.c:25 @ 402c09) [307]
+                0.00    0.00       4/48          iSetArray (iSetArray.c:10 @ 40769a) [2296]
+                0.00    0.00       5/48          getANMS (getANMS.c:138 @ 403d2a) [2007]
+                0.00    0.00       5/48          imageBlur (imageBlur.c:19 @ 40822b) [2580]
+                0.00    0.00       5/48          imageResize (imageResize.c:26 @ 4085b7) [2645]
+                0.00    0.00       5/48          readImage (readImage.c:68 @ 409160) [3247]
+                0.00    0.00       9/48          calcSobel_dY (calcSobel_dY.c:26 @ 40444b) [607]
+                0.00    0.00       9/48          calcSobel_dY (calcSobel_dY.c:28 @ 404470) [611]
+[86]     0.0    0.00    0.00      48         iMallocHandle (iMallocHandle.c:10 @ 4074d0) [86]
+-----------------------------------------------
+                0.00    0.00       1/39          getANMS (getANMS.c:148 @ 403d60) [2013]
+                0.00    0.00       1/39          getANMS (getANMS.c:148 @ 403d69) [2015]
+                0.00    0.00       4/39          calcPyrLKTrack (calcPyrLKTrack.c:174 @ 4032bd) [478]
+                0.00    0.00       5/39          getANMS (getANMS.c:138 @ 403d1d) [2005]
+                0.00    0.00       5/39          imageBlur (imageBlur.c:63 @ 4084e9) [2621]
+                0.00    0.00       5/39          imageResize (imageResize.c:75 @ 408880) [2694]
+                0.00    0.00       9/39          calcSobel_dY (calcSobel_dY.c:74 @ 404649) [650]
+                0.00    0.00       9/39          calcSobel_dY (calcSobel_dY.c:75 @ 404659) [653]
+[87]     0.0    0.00    0.00      39         iFreeHandle (iFreeHandle.c:10 @ 407360) [87]
+-----------------------------------------------
+                0.00    0.00       1/15          getANMS (getANMS.c:72 @ 403a0b) [1915]
+                0.00    0.00       4/15          getANMS (getANMS.c:73 @ 403dcb) [2028]
+                0.00    0.00       5/15          getANMS (getANMS.c:84 @ 403a30) [1920]
+                0.00    0.00       5/15          getANMS (getANMS.c:84 @ 403a3e) [1922]
+[88]     0.0    0.00    0.00      15         fDeepCopy (fDeepCopy.c:8 @ 404770) [88]
+-----------------------------------------------
+                0.00    0.00       4/4           getANMS (getANMS.c:78 @ 403deb) [2033]
+[89]     0.0    0.00    0.00       4         ffVertcat (ffVertcat.c:8 @ 406640) [89]
+-----------------------------------------------
+                0.00    0.00       4/4           calcPyrLKTrack (calcPyrLKTrack.c:42 @ 402cc7) [333]
+[90]     0.0    0.00    0.00       4         iSetArray (iSetArray.c:10 @ 407680) [90]
+-----------------------------------------------
+                0.00    0.00       1/3           calcGoodFeature (calcGoodFeature.c:48 @ 40291d) [226]
+                0.00    0.00       1/3           calcGoodFeature (calcGoodFeature.c:49 @ 40292b) [229]
+                0.00    0.00       1/3           calcGoodFeature (calcGoodFeature.c:52 @ 402960) [235]
+[91]     0.0    0.00    0.00       3         calcAreaSum (calcAreaSum.c:34 @ 402460) [91]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_start_main [4200]
+[92]     0.0    0.00    0.00       1         main (script_tracking.c:8 @ 400f70) [92]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+  [80] _IO_default_xsputn     [39] calcSobel_dX (calcSobel_dX.c:66 @ 40432f) [18] getInterpolatePatch (getInterpolatePatch.c:35 @ 403ff7)
+   [4] _IO_file_xsgetn        [40] calcSobel_dY (calcSobel_dY.c:7 @ 40452e) [23] getInterpolatePatch (getInterpolatePatch.c:35 @ 404025)
+  [81] _IO_sgetn              [41] calcSobel_dY (calcSobel_dY.c:55 @ 40455b) [87] iFreeHandle (iFreeHandle.c:10 @ 407360)
+  [33] _L_unlock_163          [42] calcSobel_dY (calcSobel_dY.c:53 @ 404572) [86] iMallocHandle (iMallocHandle.c:10 @ 4074d0)
+  [57] __close_nocancel (syscall-template.S:82 @ 4169e9) [5] calcSobel_dY (calcSobel_dY.c:55 @ 404576) [90] iSetArray (iSetArray.c:10 @ 407680)
+  [26] __open_nocancel (syscall-template.S:82 @ 416ca9) [43] calcSobel_dY (calcSobel_dY.c:57 @ 40457c) [24] imageBlur (imageBlur.c:8 @ 4082e0)
+  [27] __read_nocancel        [44] calcSobel_dY (calcSobel_dY.c:70 @ 4045d2) [50] imageBlur (imageBlur.c:43 @ 4082f3)
+  [34] brk                    [69] calcSobel_dY (calcSobel_dY.c:63 @ 404700) [12] imageBlur (imageBlur.c:43 @ 408307)
+  [91] calcAreaSum (calcAreaSum.c:34 @ 402460) [20] calcSobel_dY (calcSobel_dY.c:7 @ 404720) [51] imageBlur (imageBlur.c:45 @ 408333)
+  [35] calcAreaSum (calcAreaSum.c:48 @ 40252f) [9] calcSobel_dY (calcSobel_dY.c:68 @ 40474b) [52] imageBlur (imageBlur.c:38 @ 40833c)
+  [28] calcAreaSum (calcAreaSum.c:57 @ 402581) [45] calcSobel_dY (calcSobel_dY.c:66 @ 404755) [19] imageBlur (imageBlur.c:7 @ 408401)
+  [29] calcAreaSum (calcAreaSum.c:56 @ 402584) [88] fDeepCopy (fDeepCopy.c:8 @ 404770) [73] imageBlur (imageBlur.c:56 @ 408433)
+  [58] calcAreaSum (calcAreaSum.c:33 @ 402665) [83] fFreeHandle (fFreeHandle.c:10 @ 404b90) [74] imageBlur (imageBlur.c:54 @ 408441)
+  [59] calcAreaSum (calcAreaSum.c:104 @ 402670) [82] fMallocHandle (fMallocHandle.c:10 @ 404d00) [2] imageBlur (imageBlur.c:56 @ 408445)
+   [8] calcAreaSum (calcAreaSum.c:104 @ 402676) [22] fReshape (fReshape.c:21 @ 405138) [53] imageBlur (imageBlur.c:38 @ 408451)
+  [14] calcAreaSum (calcAreaSum.c:112 @ 4026ce) [84] fSetArray (fSetArray.c:10 @ 405490) [54] imageBlur (imageBlur.c:58 @ 408460)
+  [15] calcAreaSum (calcAreaSum.c:33 @ 4026d5) [46] fSetArray (fSetArray.c:16 @ 4054d8) [75] imageResize (imageResize.c:8 @ 408670)
+  [60] calcGoodFeature (calcGoodFeature.c:42 @ 40287b) [47] fSetArray (fSetArray.c:9 @ 4054e8) [31] imageResize (imageResize.c:52 @ 408689)
+  [61] calcGoodFeature (calcGoodFeature.c:27 @ 40288c) [10] fSetArray (fSetArray.c:16 @ 4054eb) [7] imageResize (imageResize.c:52 @ 40869b)
+  [62] calcGoodFeature (calcGoodFeature.c:62 @ 402aaf) [6] fSetArray (fSetArray.c:17 @ 4054f0) [76] imageResize (imageResize.c:7 @ 4087a1)
+  [63] calcGoodFeature (calcGoodFeature.c:61 @ 402ab1) [17] fSetArray (fSetArray.c:16 @ 4054f9) [77] imageResize (imageResize.c:67 @ 4087c1)
+  [36] calcGoodFeature (calcGoodFeature.c:62 @ 402ab7) [89] ffVertcat (ffVertcat.c:8 @ 406640) [21] imageResize (imageResize.c:67 @ 4087d3)
+  [64] calcPyrLKTrack (calcPyrLKTrack.c:142 @ 4030ad) [48] fillFeatures (fillFeatures.c:41 @ 4035e1) [32] imageResize (imageResize.c:65 @ 4087dd)
+  [65] calcPyrLKTrack (calcPyrLKTrack.c:144 @ 4030b0) [70] fillFeatures (fillFeatures.c:11 @ 4036ed) [92] main (script_tracking.c:8 @ 400f70)
+  [66] calcSobel_dX (calcSobel_dX.c:10 @ 4041e0) [71] fillFeatures (fillFeatures.c:52 @ 4036f8) [3] memcpy
+  [13] calcSobel_dX (calcSobel_dX.c:53 @ 4041ed) [11] fread (stdio2.h:287 @ 409249) [25] readImage (readImage.c:100 @ 409292)
+  [67] calcSobel_dX (calcSobel_dX.c:48 @ 404217) [1] fread [55] readImage (readImage.c:93 @ 409299)
+  [37] calcSobel_dX (calcSobel_dX.c:55 @ 404220) [85] getInterpolatePatch (getInterpolatePatch.c:9 @ 403e80) [56] readImage (readImage.c:100 @ 4092a1)
+  [68] calcSobel_dX (calcSobel_dX.c:48 @ 404228) [49] getInterpolatePatch (getInterpolatePatch.c:8 @ 403fd9) [78] readImage (readImage.c:99 @ 4092a3)
+  [38] calcSobel_dX (calcSobel_dX.c:9 @ 4042ec) [30] getInterpolatePatch (getInterpolatePatch.c:33 @ 403fe0) [79] readImage (readImage.c:93 @ 4092a8)
+  [16] calcSobel_dX (calcSobel_dX.c:66 @ 404315) [72] getInterpolatePatch (getInterpolatePatch.c:8 @ 403fe4)

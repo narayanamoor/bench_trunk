@@ -1,0 +1,257 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  us/call  us/call  name    
+ 25.64      0.10     0.10                             _IO_vfscanf_internal
+ 17.95      0.17     0.07   124114     0.56     0.60  fMtimes
+ 10.26      0.21     0.04    99414     0.40     1.21  polynomial
+ 10.26      0.25     0.04     6441     6.21    25.76  cal_learned_func
+  7.69      0.28     0.03                             ____strtof_l_internal
+  5.13      0.30     0.02   497706     0.04     0.04  fMallocHandle
+  5.13      0.32     0.02                             __close_nocancel
+  5.13      0.34     0.02                             __ieee754_pow_sse2
+  5.13      0.36     0.02                             __open_nocancel
+  5.13      0.38     0.02                             fDeepCopyRange
+  2.56      0.39     0.01                             top_check
+  0.00      0.39     0.00   252507     0.00     0.00  fFreeHandle
+  0.00      0.39     0.00     4564     0.00    36.81  examineExample
+  0.00      0.39     0.00     1969     0.00     0.04  fDeepCopy
+  0.00      0.39     0.00     1729     0.00    45.94  takeStep
+  0.00      0.39     0.00      236     0.00     0.06  fSetArray
+  0.00      0.39     0.00      207     0.00     0.04  ffVertcat
+  0.00      0.39     0.00       11     0.00     2.84  usps_read_partial
+  0.00      0.39     0.00        1     0.00     0.00  main
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 2.56% of 0.39 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     43.1    0.00    0.17                 getAlphaFromTrainSet [1]
+                0.00    0.17    4564/4564        examineExample [2]
+                0.00    0.00      11/11          usps_read_partial [16]
+                0.00    0.00      22/236         fSetArray [17]
+                0.00    0.00      30/252507      fFreeHandle [20]
+-----------------------------------------------
+                0.00    0.17    4564/4564        getAlphaFromTrainSet [1]
+[2]     43.1    0.00    0.17    4564         examineExample [2]
+                0.02    0.07    3437/6441        cal_learned_func [3]
+                0.00    0.08    1729/1729        takeStep [6]
+-----------------------------------------------
+                0.02    0.06    3004/6441        takeStep [6]
+                0.02    0.07    3437/6441        examineExample [2]
+[3]     42.5    0.04    0.13    6441         cal_learned_func [3]
+                0.04    0.08   97839/99414       polynomial [4]
+                0.01    0.00  195678/497706      fMallocHandle [10]
+-----------------------------------------------
+                0.00    0.00    1575/99414       takeStep [6]
+                0.04    0.08   97839/99414       cal_learned_func [3]
+[4]     30.8    0.04    0.08   99414         polynomial [4]
+                0.07    0.00  124114/124114      fMtimes [7]
+                0.00    0.00  124114/497706      fMallocHandle [10]
+                0.00    0.00  248228/252507      fFreeHandle [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]     25.6    0.10    0.00                 _IO_vfscanf_internal [5]
+-----------------------------------------------
+                0.00    0.08    1729/1729        examineExample [2]
+[6]     20.4    0.00    0.08    1729         takeStep [6]
+                0.02    0.06    3004/6441        cal_learned_func [3]
+                0.00    0.00    1575/99414       polynomial [4]
+                0.00    0.00    1866/497706      fMallocHandle [10]
+                0.00    0.00    1718/1969        fDeepCopy [15]
+                0.00    0.00    3584/252507      fFreeHandle [20]
+-----------------------------------------------
+                0.07    0.00  124114/124114      polynomial [4]
+[7]     19.2    0.07    0.00  124114         fMtimes [7]
+                0.00    0.00  124114/497706      fMallocHandle [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      7.7    0.03    0.00                 ____strtof_l_internal [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[9]      5.6    0.02    0.00                 fDeepCopyRange [9]
+                0.00    0.00   49400/497706      fMallocHandle [10]
+-----------------------------------------------
+                0.00    0.00      20/497706      usps_read_partial [16]
+                0.00    0.00     207/497706      ffVertcat [18]
+                0.00    0.00     338/497706      fSetArray [17]
+                0.00    0.00    1866/497706      takeStep [6]
+                0.00    0.00    1969/497706      fDeepCopy [15]
+                0.00    0.00   49400/497706      fDeepCopyRange [9]
+                0.00    0.00  124114/497706      polynomial [4]
+                0.00    0.00  124114/497706      fMtimes [7]
+                0.01    0.00  195678/497706      cal_learned_func [3]
+[10]     5.1    0.02    0.00  497706         fMallocHandle [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[11]     5.1    0.02    0.00                 __close_nocancel [11]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     5.1    0.02    0.00                 __ieee754_pow_sse2 [12]
+-----------------------------------------------
+                                                 <spontaneous>
+[13]     5.1    0.02    0.00                 __open_nocancel [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[14]     2.6    0.01    0.00                 top_check [14]
+-----------------------------------------------
+                0.00    0.00     251/1969        usps_read_partial [16]
+                0.00    0.00    1718/1969        takeStep [6]
+[15]     0.0    0.00    0.00    1969         fDeepCopy [15]
+                0.00    0.00    1969/497706      fMallocHandle [10]
+-----------------------------------------------
+                0.00    0.00      11/11          getAlphaFromTrainSet [1]
+[16]     0.0    0.00    0.00      11         usps_read_partial [16]
+                0.00    0.00     210/236         fSetArray [17]
+                0.00    0.00     251/1969        fDeepCopy [15]
+                0.00    0.00     207/207         ffVertcat [18]
+                0.00    0.00      20/497706      fMallocHandle [10]
+                0.00    0.00     665/252507      fFreeHandle [20]
+-----------------------------------------------
+                0.00    0.00       4/236         readFile [19]
+                0.00    0.00      22/236         getAlphaFromTrainSet [1]
+                0.00    0.00     210/236         usps_read_partial [16]
+[17]     0.0    0.00    0.00     236         fSetArray [17]
+                0.00    0.00     338/497706      fMallocHandle [10]
+-----------------------------------------------
+                0.00    0.00     207/207         usps_read_partial [16]
+[18]     0.0    0.00    0.00     207         ffVertcat [18]
+                0.00    0.00     207/497706      fMallocHandle [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[19]     0.0    0.00    0.00                 readFile [19]
+                0.00    0.00       4/236         fSetArray [17]
+-----------------------------------------------
+                0.00    0.00      30/252507      getAlphaFromTrainSet [1]
+                0.00    0.00     665/252507      usps_read_partial [16]
+                0.00    0.00    3584/252507      takeStep [6]
+                0.00    0.00  248228/252507      polynomial [4]
+[20]     0.0    0.00    0.00  252507         fFreeHandle [20]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_start_main [1069]
+[21]     0.0    0.00    0.00       1         main [21]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+   [5] _IO_vfscanf_internal   [15] fDeepCopy              [21] main
+   [8] ____strtof_l_internal   [9] fDeepCopyRange          [4] polynomial
+  [11] __close_nocancel       [20] fFreeHandle             [6] takeStep
+  [12] __ieee754_pow_sse2     [10] fMallocHandle          [14] top_check
+  [13] __open_nocancel         [7] fMtimes                [16] usps_read_partial
+   [3] cal_learned_func       [17] fSetArray
+   [2] examineExample         [18] ffVertcat
